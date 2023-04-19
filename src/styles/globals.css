@@ -1,3 +1,226 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html,
+body {
+  will-change: scroll;
+}
+
+body {
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+.gradient {
+  background: linear-gradient(
+    140deg,
+    lch(55.426% 65 248.244),
+    lch(41.146% 55 246.713),
+    lch(32.877% 65 245.35),
+    lch(46.456% 75 246.637)
+  );
+}
+
+.gradient-3 {
+  background: linear-gradient(
+    to right top,
+    lch(39.843% 100 313.879),
+    lch(40.096% 90 312.655),
+    lch(40.024% 120 311.36),
+    lch(39.967% 114 310.184),
+    lch(39.967% 123 310.184),
+    lch(41.933% 128 309.574),
+    lch(43.867% 124 310.387),
+    lch(45.792% 121 310.885),
+    lch(50.11% 108 313.55),
+    lch(54.338% 109 316.277),
+    lch(58.787% 110 318.992),
+    lch(63.059% 106 321.566)
+  );
+}
+
+.gradient-4 {
+  background: linear-gradient(
+    -45deg,
+    lch(20% 55 306.256) 0%,
+    lch(39.352% 132 308.054) 100%
+  );
+}
+
+.gradient-2 {
+  background: linear-gradient(179deg, #09090900 0%, #000000 70%);
+}
+
+.dots-background {
+  background-image: radial-gradient(currentColor 1px, transparent 1px);
+  background-size: 10px 10px;
+  color: #0077ff75;
+}
+
+.hero-gradient::before {
+  content: "";
+  background: linear-gradient(179deg, #09090900 0%, #000000 70%);
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+}
+
+.border-shadow.active {
+  box-shadow: #fff 0 0, #1777f8 0 0 0 3px, #0000 0 0;
+}
+
+.border-shadow {
+  box-shadow: #fff 0 0, transparent 0 0 0 3px, #0000 0 0;
+}
+
+.cm-editor {
+  @apply outline-none overflow-hidden border-none p-2 min-w-[218px] md:w-[379px] !important;
+  font-size: 8px;
+  @apply md:text-xs;
+}
+
+.box-shadow {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.glass-effect {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.035) 35%,
+    rgba(255, 255, 255, 0%) 100%
+  );
+}
+
+/* ShowCase card gradients */
+.showcase-card {
+  z-index: 6;
+  background: linear-gradient(
+    135deg,
+    rgba(171, 73, 222, 1) 0%,
+    rgba(73, 84, 222, 1) 100%
+  );
+}
+
+.back-card {
+  z-index: 0;
+  position: absolute;
+  inset: 50% 0 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  @apply rounded-3xl;
+  filter: blur(200px) saturate(500%);
+  transform: translate3d(0, -50%, 0) scale(0.75);
+}
+
+.showcase-card .cm-editor {
+  @apply p-5 !important;
+}
+
+.back-card.back-1 {
+  background: linear-gradient(
+    135deg,
+    rgba(171, 73, 222, 1) 0%,
+    rgba(73, 84, 222, 1) 100%
+  );
+}
+
+.showcase-card-gradient-1 .cm-editor {
+  background: #282a36;
+}
+
+/********************************/
+
+.showcase-card-gradient-2 {
+  background: linear-gradient(
+    140deg,
+    rgb(241, 160, 61),
+    rgb(192, 74, 65),
+    rgb(115, 52, 52)
+  );
+}
+
+.back-card.back-2 {
+  background: linear-gradient(
+    140deg,
+    rgb(241, 160, 61),
+    rgb(192, 74, 65),
+    rgb(115, 52, 52)
+  );
+}
+
+.showcase-card-gradient-2 .cm-editor {
+  background: #2a0303;
+}
+
+/********************************/
+
+.showcase-card-gradient-3 {
+  background: linear-gradient(135deg, #e233ff 0%, #ff6b00 100%);
+}
+
+.back-card.back-3 {
+  background: linear-gradient(135deg, #e233ff 0%, #ff6b00 100%);
+}
+
+.showcase-card-gradient-3 .cm-editor {
+  background: #0d1117;
+}
+
+/********************************/
+
+.showcase-card-gradient-4 {
+  background: linear-gradient(
+    to right bottom,
+    #2be7b5,
+    #1edea2,
+    #16d58f,
+    #13cb7c,
+    #16c268,
+    #0db866,
+    #04ae64,
+    #00a462,
+    #00976c,
+    #008971,
+    #007b72,
+    #006d6d
+  );
+}
+
+.back-card.back-4 {
+  background: linear-gradient(0deg, #6394bf, #a1b567);
+}
+
+.showcase-card-gradient-4 .cm-editor {
+  background: #121212;
+}
+
+/********************************/
+
+.showcase-card-gradient-5 {
+  background: linear-gradient(
+    140deg,
+    rgb(9, 171, 241),
+    rgb(5, 105, 148),
+    rgb(4, 84, 118),
+    rgb(6, 119, 167)
+  );
+}
+
+.back-card.back-5 {
+  background: linear-gradient(
+    140deg,
+    rgb(9, 171, 241),
+    rgb(5, 105, 148),
+    rgb(4, 84, 118),
+    rgb(6, 119, 167)
+  );
+}
+
+.showcase-card-gradient-5 .cm-editor {
+  background: #041c31;
+}
