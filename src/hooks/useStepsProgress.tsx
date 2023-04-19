@@ -1,4 +1,4 @@
-import { UseScrollOptions, useScroll } from "framer-motion";
+import { useScroll } from "framer-motion";
 import { useState } from "react";
 
 function getStepIndex(progress: number, steps: number[]) {
@@ -7,7 +7,7 @@ function getStepIndex(progress: number, steps: number[]) {
   return index === -1 ? steps.length - 1 : index;
 }
 
-const useStepsProgress = (offsets: number[], options: UseScrollOptions) => {
+const useStepsProgress = (offsets: number[], options: any) => {
   const [currentStep, setCurrentStep] = useState(0);
 
   const { scrollYProgress: progress } = useScroll(options);
